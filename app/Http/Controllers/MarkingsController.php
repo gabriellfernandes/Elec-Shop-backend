@@ -58,9 +58,9 @@ class MarkingsController extends Controller
             return Response()->json(['message' => 'Marking not found'], 404);
         }
 
-        $markings = Markings::firstWhere('name', $data['name']);
+        $markingsExist = Markings::firstWhere('name', $data['name']);
 
-        if ($markings) {
+        if ($markingsExist) {
             return Response()->json(['message' => 'name already exist'], 409);
         }
 

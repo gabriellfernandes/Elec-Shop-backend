@@ -10,7 +10,7 @@ class DomesticAppliancesController extends Controller
 
     public function index()
     {
-        $domestic_appliances = DomesticAppliances::all()::with('marking')->get();
+        $domestic_appliances = DomesticAppliances::all()->load('marking');
 
         return Response()->json(['data' => $domestic_appliances], 200);
     }
@@ -23,7 +23,7 @@ class DomesticAppliancesController extends Controller
             return Response()->json(['message' => 'Domestic appliance not found'], 404);
         }
 
-        return Response()->json(['data' => $domestic_appliances], 200);
+        return Response()->json(['data' => $domestic_appliances->load('marking')], 200);
     }
 
     public function store(Request $request)
