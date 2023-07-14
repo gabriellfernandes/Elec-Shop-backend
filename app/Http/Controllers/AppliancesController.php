@@ -36,6 +36,22 @@ class AppliancesController extends Controller
         return Response()->json(['data' => $appliances], 200);
     }
 
+    public function showByName($name)
+    {
+        $appliances =
+            Appliances::where('name', 'like', "%$name%")->get();
+
+        return Response()->json(['data' => $appliances], 200);
+    }
+
+    public function showByMarking($marking)
+    {
+        $appliances =
+            Appliances::where('marking', 'like', "%$marking%")->get();
+
+        return Response()->json(['data' => $appliances], 200);
+    }
+
     public function store(Request $request)
     {
         if ($request->headers->get("content-type") == "application/json") {
@@ -67,7 +83,6 @@ class AppliancesController extends Controller
         return Response()->json(['message' => 'appliance created success!', 'data' => $appliances], 201);
     }
 
-
     public function update(
         $id,
         Request $request,
@@ -78,7 +93,6 @@ class AppliancesController extends Controller
         } else {
             $data = $request->request->all();
         }
-
 
         if (array_key_exists("voltage", $data)) {
             if (!$this->verifyValue($data['voltage'], $this->voltages)) {
@@ -91,8 +105,6 @@ class AppliancesController extends Controller
                 return Response()->json(['message' => "Invalid marking value"], 400);
             };
         }
-
-
 
         if (array_key_exists("name", $data)) {
             $appliances = Appliances::firstWhere('name', $data['name']);
@@ -124,7 +136,6 @@ class AppliancesController extends Controller
 
         return Response()->json([], 204);
     }
-
 
     public function verifyValue($value, $values)
     {

@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('/appliances', AppliancesController::class);
+Route::get('/appliances/search/{name}', [AppliancesController::class, 'showByName']);
+Route::get('/appliances/search/{marking}', [AppliancesController::class, 'showByMarking']);
