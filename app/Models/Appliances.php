@@ -5,19 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DomesticAppliances extends Model
+class Appliances extends Model
 {
     use HasFactory;
-    protected $table = "domestic_appliances";
+    protected $table = "appliances";
     protected $fillable = [
         'name',
         'description',
         'marking',
         'voltage'
     ];
-
-    public function marking()
-    {
-        return $this->belongsTo(related: Markings::class, foreignKey: 'marking', ownerKey: 'id');
-    }
 }

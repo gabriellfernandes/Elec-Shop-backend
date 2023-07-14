@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DomesticAppliancesController;
+use App\Http\Controllers\AppliancesController;
 use App\Http\Controllers\MarkingsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,5 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('/appliances', DomesticAppliancesController::class);
-Route::apiResource('/marking', MarkingsController::class);
+Route::apiResource('/appliances', AppliancesController::class);
