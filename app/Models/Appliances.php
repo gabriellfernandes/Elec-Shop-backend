@@ -13,6 +13,8 @@ class Appliances extends Model
         'name',
         'description',
         'marking',
+        'image',
+        'quantity',
         'voltage'
     ];
 }

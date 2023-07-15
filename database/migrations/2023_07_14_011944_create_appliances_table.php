@@ -13,6 +13,8 @@ return new class extends Migration
         Schema::create('appliances', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('image')->nullable();
+            $table->integer('quantity')->default(0);
             $table->string('description');
             $table->string('marking');
             $table->string('voltage');
