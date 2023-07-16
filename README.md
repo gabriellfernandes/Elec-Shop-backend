@@ -236,7 +236,7 @@ retorno:
     quatity: 10 **Quantidade de produtos**
 
     Exemplo de body:
-    ```
+
     {
       "name": "Geladeira",
       "description": "é uma descrição",
@@ -244,27 +244,26 @@ retorno:
       "voltage": "220",
       "quantity": 34
     }
-    ```
-  `
+ 
+  
+  3.7.1 Caso o todos os dados estejam correto
 
-  3.7.1 Caso o esteja com todos os dados correto
-
-    `status: 201`
-    ```
-    {
-    "message": "appliance created success!",
-    "data": {
-      "id": 1,
-      "name": "Geladeira",
-      "description": "é uma descrição",
-      "marking": "LG",
-      "voltage": "220",
-      "quantity": 34,
-      "updated_at": "2023-07-16T04:11:13.000000Z",
-      "created_at": "2023-07-16T04:11:13.000000Z"
-      }
-    }
-    ```
+  `status: 201`
+  ```
+  {
+	"message": "appliance created success!",
+	"data": {
+		"name": "helt",
+		"description": "Chat é um descrição",
+		"marking": "lg",
+		"voltage": "220",
+		"quantity": 34,
+		"updated_at": "2023-07-16T05:12:56.000000Z",
+		"created_at": "2023-07-16T05:12:56.000000Z",
+		"id": 52
+	}
+}
+  ```
 
   3.7.2 Caso o nome ja esteja em uso
 
@@ -303,7 +302,7 @@ retorno:
   ```
 
 
-3.8.1 Rota para atualizar o eletrodomésticos  `metodo:pacth Rota:localhost:8000/api/appliances/{id}`:
+3.8 Rota para atualizar o eletrodomésticos  `metodo:pacth Rota:localhost:8000/api/appliances/{id}`:
   
     caso tenha esses campos no body
     marking: "LG" **é um option que aceita somente essas marcas ['electrolux', 'brastemp', 'fischer', 'samsung', 'lg']**
@@ -321,26 +320,25 @@ retorno:
     ```
 
   
-  3.8.2 Caso o esteja com todos os dados correto
+  3.8.1 Caso o todos os dados estejam correto
 
-    `status: 200`
-
-    ```
-    {
-    	"message": "appliance updated success!",
-    	"data": {
-    		"id": 2,
-    		"name": "Geladeira 2",
-    		"image": null,
-    		"quantity": 34,
-    		"description": "é uma descrição",
-    		"marking": "lg",
-    		"voltage": "220",
-    		"created_at": "2023-07-16T03:45:53.000000Z",
-    		"updated_at": "2023-07-16T04:30:11.000000Z"
-    	}
-    }
-    ```
+  `status: 201`
+  ```
+ {
+	"message": "appliance updated success!",
+	"data": {
+		"id": 4,
+		"name": "totam",
+		"image": null,
+		"quantity": 2,
+		"description": "Accusamus quaerat a totam nihil qui qui.",
+		"marking": "lg",
+		"voltage": "127",
+		"created_at": "2023-07-16T03:45:53.000000Z",
+		"updated_at": "2023-07-16T05:14:27.000000Z"
+	}
+}
+  ```
 
   3.8.3 Caso o nome ja esteja em uso
 
@@ -381,6 +379,7 @@ retorno:
 3.9.1 Rota para deletar o eletrodomésticos  `metodo:delete Rota:localhost:8000/api/appliances/{id}`:
   
   3.9.2 Retorno caso o id exista:
+
   `status: 204`
 
   3.9.2 Retorno caso o id não exista:
