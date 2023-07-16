@@ -319,10 +319,12 @@ retorno:
         "quantity": 34
       }
     ```
+
   
-  
-  3.7.1 Caso o esteja com todos os dados correto
+  3.8.2 Caso o esteja com todos os dados correto
+
     `status: 200`
+
     ```
     {
     	"message": "appliance updated success!",
@@ -340,7 +342,7 @@ retorno:
     }
     ```
 
-  3.7.2 Caso o nome ja esteja em uso
+  3.8.3 Caso o nome ja esteja em uso
 
   `status: 409`
   ```
@@ -349,7 +351,7 @@ retorno:
   }
   ```
 
-  3.7.3 Caso o id for invalido
+  3.8.4 Caso o id for invalido
 
   `status: 404`
   ```
@@ -358,7 +360,7 @@ retorno:
   }
   ```
 
-  3.7.4 Caso a marca esteja invalida
+  3.8.6 Caso a marca esteja invalida
 
   `status: 400`
   ```
@@ -367,7 +369,7 @@ retorno:
   }
   ```
 
-  3.7.5 Caso a voltagem esteja invalida
+  3.8.6 Caso a voltagem esteja invalida
 
   `status: 400`
   ```
@@ -381,7 +383,7 @@ retorno:
   3.9.2 Retorno caso o id exista:
   `status: 204`
 
-  3.3.2 Retorno caso o id não exista:
+  3.9.2 Retorno caso o id não exista:
   
   `status: 404 `
   ```
