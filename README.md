@@ -6,7 +6,8 @@
 1. [Sobre](#sobre)
 2. [Instalação](#install)
 3. [Documentação](#doc)
-4. [Desenvolvedor](#devs)
+4. [Frontend](#frontend)
+5. [Desenvolvedor](#devs)
 6. [Termos de uso](#terms)
 
 
@@ -77,7 +78,8 @@ Press Ctrl+C to stop the server
 <a name="doc"></a>
 
 ## 3. Documentação
-3.1 Informação nenhuma rota tem authenticação.
+3.1 Informação nenhuma rota tem authenticação 
+- <a name="insomina" href="https://drive.google.com/file/d/1Svel1kP4FuDODOjSPjy9nZR-yxC_3iO6/view" target="_blank">Arquivo de importação para o Insomnia</a>
 
 3.2 Rota para pegar todos os eletrodomésticos `metodo:get Rota:localhost:8000/api/appliances` 
 
@@ -390,9 +392,14 @@ retorno:
 	  "message": "appliance not found!"
   }
   ```
+<a name="frontend"></a>
+
+## 4. Front-End
+- <a name="Repositorio Back-End" href="https://github.com/gabriellfernandes/Elec-Shop-frontend" target="_blank">Repositorio Front-End</a>
+
 <a name="devs"></a>
 
-## 4. Desenvolvedor
+## 5. Desenvolvedor
 
 [ Voltar para o topo ](#tabela-de-conteúdos)
 
@@ -400,6 +407,6 @@ retorno:
 
 <a name="terms"></a>
 
-## 5. Termos de uso
+## 6. Termos de uso
 
 Este é um projeto Open Source para fins educacionais e não comerciais, **Tipo de licença** - <a name="mit" href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>
