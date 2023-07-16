@@ -21,7 +21,7 @@ class AppliancesController extends Controller
         $appliances =
             Appliances::all();
 
-        return Response()->json(['data' => $appliances], 200);
+        return Response()->json($appliances, 200);
     }
 
     public function show($id)
@@ -33,7 +33,7 @@ class AppliancesController extends Controller
             return Response()->json(['message' => 'appliance not found!'], 404);
         }
 
-        return Response()->json(['data' => $appliances], 200);
+        return Response()->json($appliances, 200);
     }
 
     public function showByName($name)
@@ -41,7 +41,7 @@ class AppliancesController extends Controller
         $appliances =
             Appliances::where('name', 'like', "%$name%")->get();
 
-        return Response()->json(['data' => $appliances], 200);
+        return Response()->json($appliances, 200);
     }
 
     public function showByMarking($marking)
@@ -49,7 +49,7 @@ class AppliancesController extends Controller
         $appliances =
             Appliances::where('marking', 'like', "%$marking%")->get();
 
-        return Response()->json(['data' => $appliances], 200);
+        return Response()->json($appliances, 200);
     }
 
     public function store(Request $request)
