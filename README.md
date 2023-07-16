@@ -100,7 +100,7 @@ retorno:
 	{
 		"id": 2,
 		"name": "fugit",
-		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail\/fill\/520x410\/gallery\/1405.png\/235,235,235",
+		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail.png",
 		"quantity": 12,
 		"description": "Nobis rerum libero rerum iusto.",
 		"marking": "samsung",
@@ -150,7 +150,7 @@ retorno:
 	{
 		"id": 2,
 		"name": "maxime",
-		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail\/fill\/520x410\/gallery\/1405.png\/235,235,235",
+		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail.png",
 		"quantity": 1,
 		"description": "Non qui neque perspiciatis.",
 		"marking": "lg",
@@ -182,7 +182,7 @@ retorno:
 	{
 		"id": 3,
 		"name": "corporis",
-		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail\/fill\/520x410\/gallery\/1393.png\/235,235,235",
+		"image": "https:\/\/www.realce.ind.br\/extranet\/thumbnail.png",
 		"quantity": 7,
 		"description": "Sit aliquam qui excepturi assumenda maiores et neque.",
 		"marking": "electrolux",
@@ -302,14 +302,6 @@ retorno:
   }
   ```
 
-  3.7.6 Caso a voltagem esteja invalida
-
-  `status: 400`
-  ```
-  {
-  	"message": "Invalid voltage value"
-  }
-  ```
 
 3.8.1 Rota para atualizar o eletrodomésticos  `metodo:pacth Rota:localhost:8000/api/appliances/{id}`:
   
